@@ -17,7 +17,9 @@ return require('packer').startup(function(use)
                 cmp = true,
                 gitsigns = true,
                 nvimtree = true,
-                which_key = true
+                which_key = true,
+                telescope = true,
+                treesitter = true
             }
         }
         vim.api.nvim_command("colorscheme catppuccin")
@@ -57,8 +59,23 @@ return require('packer').startup(function(use)
   use {
     "lewis6991/gitsigns.nvim"
   }
+  -- lualine status line
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  -- plenary nvim lib
+  use "nvim-lua/plenary.nvim"
+  -- telescope fzf native
+  use {"nvim-telescope/telescope-fzf-native.nvim", run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"}
+  -- telescope
+  use {
+    "nvim-telescope/telescope.nvim", tag = "0.1.0",
+    requires = { { "nvim-lua/plenary.nvim" } }
+  }
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate"
+  } 
 end)
