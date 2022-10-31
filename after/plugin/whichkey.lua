@@ -13,6 +13,15 @@ wk.register(
             g = { require("telescope.builtin").git_files, "Fuzzy search `git lis-files`" },
             b = { require("telescope.builtin").grep_string, "Search for string under cursor in cwd" },
             h = { require("telescope.builtin").live_grep, "Grep string with live results" }
+        },
+        x = {
+            name = "trouble diagnostics",
+            x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
+            w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
+            d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
+            l = { "<cmd>TroubleToggle loclist<cr>", "Location List" },
+            q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+            R = { "<cmd>TroubleToggle lsp_references<cr>", "Toggle LSP References" }
         }
     },
     {

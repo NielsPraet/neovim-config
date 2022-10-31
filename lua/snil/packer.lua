@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
   -- which key plugin
   use {
     "folke/which-key.nvim",
-    config = function() 
+    config = function()
         require("which-key").setup {
         }
     end
@@ -77,5 +77,13 @@ return require('packer').startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
-  } 
+  }
+  -- Trouble - code warning and error list
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons"
+  }
+  use {
+    "numToStr/Comment.nvim"
+  }
 end)
