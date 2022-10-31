@@ -19,7 +19,8 @@ return require('packer').startup(function(use)
                 nvimtree = true,
                 which_key = true,
                 telescope = true,
-                treesitter = true
+                treesitter = true,
+                notify = true
             }
         }
         vim.api.nvim_command("colorscheme catppuccin")
@@ -85,5 +86,8 @@ return require('packer').startup(function(use)
   }
   use {
     "numToStr/Comment.nvim"
+  }
+  use {
+    "rcarriga/nvim-notify"
   }
 end)
