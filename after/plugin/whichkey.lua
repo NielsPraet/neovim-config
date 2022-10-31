@@ -22,6 +22,13 @@ wk.register(
             l = { "<cmd>TroubleToggle loclist<cr>", "Location List" },
             q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
             R = { "<cmd>TroubleToggle lsp_references<cr>", "Toggle LSP References" }
+        },
+        h = {
+            name = "harpoon",
+            p = { require("harpoon.mark").add_file, "mark file" },
+            n = { require("harpoon.ui").toggle_quick_menu, "toggle quick menu" },
+            j = { require("harpoon.ui").nav_prev, "previous mark" },
+            k = { require("harpoon.ui").nav_next, "next mark" },
         }
     },
     {

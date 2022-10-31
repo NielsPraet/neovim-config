@@ -85,7 +85,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   catppuccin = {
-    config = { "\27LJ\2\nì\1\0\0\4\0\n\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\17integrations\1\0\a\15treesitter\2\vnotify\2\14telescope\2\14which_key\2\rnvimtree\2\rgitsigns\2\bcmp\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0" },
+    config = { "\27LJ\2\nì\1\0\0\4\0\n\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\17integrations\1\0\a\rnvimtree\2\rgitsigns\2\bcmp\2\vnotify\2\15treesitter\2\14telescope\2\14which_key\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0" },
     loaded = true,
     path = "/home/snil/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -104,6 +104,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/snil/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  harpoon = {
+    loaded = true,
+    path = "/home/snil/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -186,7 +191,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: catppuccin
 time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\nì\1\0\0\4\0\n\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\17integrations\1\0\a\15treesitter\2\vnotify\2\14telescope\2\14which_key\2\rnvimtree\2\rgitsigns\2\bcmp\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
+try_loadstring("\27LJ\2\nì\1\0\0\4\0\n\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\17integrations\1\0\a\rnvimtree\2\rgitsigns\2\bcmp\2\vnotify\2\15treesitter\2\14telescope\2\14which_key\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
 time([[Config for catppuccin]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
