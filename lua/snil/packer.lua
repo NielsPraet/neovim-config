@@ -90,4 +90,5 @@ return require('packer').startup(function(use)
   use {
     "rcarriga/nvim-notify"
   }
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 end)
