@@ -85,7 +85,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   catppuccin = {
-    config = { "\27LJ\2\nœ\1\0\1\4\0\v\0\0185\1\3\0005\2\1\0009\3\0\0=\3\2\2=\2\4\0015\2\5\0009\3\0\0=\3\2\2=\2\6\0015\2\a\0009\3\0\0=\3\2\2=\2\b\0015\2\t\0009\3\0\0=\3\2\2=\2\n\1L\1\2\0\30DiagnosticVirtualTextHint\1\0\0\30DiagnosticVirtualTextInfo\1\0\0\30DiagnosticVirtualTextWarn\1\0\0\31DiagnosticVirtualTextError\1\0\0\abg\1\0\0\tnoneá\2\1\0\4\0\f\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0023\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\22custom_highlights\0\17integrations\1\0\a\bcmp\2\vnotify\2\15treesitter\2\14telescope\2\14which_key\2\rnvimtree\2\rgitsigns\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0" },
+    config = { "\27LJ\2\nœ\1\0\1\4\0\v\0\0185\1\3\0005\2\1\0009\3\0\0=\3\2\2=\2\4\0015\2\5\0009\3\0\0=\3\2\2=\2\6\0015\2\a\0009\3\0\0=\3\2\2=\2\b\0015\2\t\0009\3\0\0=\3\2\2=\2\n\1L\1\2\0\30DiagnosticVirtualTextHint\1\0\0\30DiagnosticVirtualTextInfo\1\0\0\30DiagnosticVirtualTextWarn\1\0\0\31DiagnosticVirtualTextError\1\0\0\abg\1\0\0\tnoneá\2\1\0\4\0\f\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0023\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\22custom_highlights\0\17integrations\1\0\a\14which_key\2\rnvimtree\2\rgitsigns\2\bcmp\2\15treesitter\2\vnotify\2\14telescope\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0" },
     loaded = true,
     path = "/home/snil/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -109,6 +109,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/snil/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/snil/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -209,14 +214,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: catppuccin
-time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\nœ\1\0\1\4\0\v\0\0185\1\3\0005\2\1\0009\3\0\0=\3\2\2=\2\4\0015\2\5\0009\3\0\0=\3\2\2=\2\6\0015\2\a\0009\3\0\0=\3\2\2=\2\b\0015\2\t\0009\3\0\0=\3\2\2=\2\n\1L\1\2\0\30DiagnosticVirtualTextHint\1\0\0\30DiagnosticVirtualTextInfo\1\0\0\30DiagnosticVirtualTextWarn\1\0\0\31DiagnosticVirtualTextError\1\0\0\abg\1\0\0\tnoneá\2\1\0\4\0\f\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0023\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\22custom_highlights\0\17integrations\1\0\a\bcmp\2\vnotify\2\15treesitter\2\14telescope\2\14which_key\2\rnvimtree\2\rgitsigns\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
-time([[Config for catppuccin]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\nœ\1\0\1\4\0\v\0\0185\1\3\0005\2\1\0009\3\0\0=\3\2\2=\2\4\0015\2\5\0009\3\0\0=\3\2\2=\2\6\0015\2\a\0009\3\0\0=\3\2\2=\2\b\0015\2\t\0009\3\0\0=\3\2\2=\2\n\1L\1\2\0\30DiagnosticVirtualTextHint\1\0\0\30DiagnosticVirtualTextInfo\1\0\0\30DiagnosticVirtualTextWarn\1\0\0\31DiagnosticVirtualTextError\1\0\0\abg\1\0\0\tnoneá\2\1\0\4\0\f\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0023\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\bvim\22custom_highlights\0\17integrations\1\0\a\14which_key\2\rnvimtree\2\rgitsigns\2\bcmp\2\15treesitter\2\vnotify\2\14telescope\2\1\0\1\fflavour\14macchiato\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

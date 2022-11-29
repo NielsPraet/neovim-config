@@ -110,4 +110,5 @@ return require('packer').startup(function(use)
     use "windwp/nvim-autopairs"
     use "windwp/nvim-ts-autotag"
     use "onsails/lspkind.nvim"
+    use "lewis6991/impatient.nvim"
 end)
