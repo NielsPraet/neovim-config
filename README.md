@@ -32,6 +32,7 @@
 - **HTML auto tag pairs**: [nvim-ts-autopairs](https://github.com/windwp/nvim-ts-autotag)
 - **Pictograms for LSP**: [lspkind](https://github.com/onsails/lspkind.nvim)
 - **General Speedup**: [impatient](https://github.com/lewis6991/impatient.nvim)
+- **Surround helper functions**: [nvim-surround](kylechui/nvim-surround)
 
 ## Plugin Configs
 - [theme](after/plugin/color.lua)
@@ -50,3 +51,4 @@
 - [vim-tree](after/plugin/vim-tree.lua)
 - [which-key](after/plugin/which-key.lua)
 - [impatient](after/plugin/impatient.lua)
+- [nvim-surround](after/plugin/nvim-surround.lua)
