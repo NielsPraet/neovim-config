@@ -4,3 +4,4 @@ vim.g.loaded_netrwPlugin = 1
 
 require('snil.set')
 require('snil.packer')
+require('snil.remap')

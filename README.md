@@ -1,6 +1,7 @@
 # Neovim Config
 
 ## General config
+
 - [Keymap helper functions](lua/snil/keymap.lua)
 - [Key Remaps](lua/snil/keymap.lua)
 - [Editor Config](lua/snil/set.lua)
@@ -9,7 +10,6 @@
 
 - **Theme**: [catppuccin](https://github.com/catppuccin/nvim)
 - **Keybind hints**: [which-key](https://github.com/folke/which-key.nvim)
-- **File Tree view**: [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - **Language Server Protocol**: [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - **Autocompletion Plugin**: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - **LSP source for Autocompletion**: [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -33,8 +33,10 @@
 - **Pictograms for LSP**: [lspkind](https://github.com/onsails/lspkind.nvim)
 - **General Speedup**: [impatient](https://github.com/lewis6991/impatient.nvim)
 - **Surround helper functions**: [nvim-surround](kylechui/nvim-surround)
+- **Hover information**: [hover](https://github.com/lewis6991/hover.nvim)
 
 ## Plugin Configs
+
 - [theme](after/plugin/color.lua)
 - [comment](after/plugin/comment.lua)
 - [gitsigns](after/plugin/gitsigns.lua)
@@ -48,7 +50,7 @@
 - [telescope](after/plugin/telescope.lua)
 - [treesitter](after/plugin/treesitter.lua)
 - [trouble](after/plugin/trouble.lua)
-- [vim-tree](after/plugin/vim-tree.lua)
 - [which-key](after/plugin/which-key.lua)
 - [impatient](after/plugin/impatient.lua)
 - [nvim-surround](after/plugin/nvim-surround.lua)
+- [hover](after/plugin/hover.lua)

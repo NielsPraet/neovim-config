@@ -25,13 +25,9 @@ local on_attach = function(client, bufnr)
     -- formatting
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_create_autocmd("BufWritePre", {
-            group = vim.api.nvim_create_augroup("Format", {
-                clear = true
-            }),
+            group = vim.api.nvim_create_augroup("Format", { clear = true }),
             buffer = bufnr,
-            callback = function()
-                vim.lsp.buf.format()
-            end
+            callback = function() vim.lsp.buf.format() end
         })
     end
 
@@ -47,12 +43,13 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    vim.keymap.set('n', '<space>f',
+        function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 local lsp_flags = {
     -- This is the default in Nvim 0.7+
-    debounce_text_changes = 150,
+    debounce_text_changes = 150
 }
 
 -- LSP Setups
@@ -100,22 +97,20 @@ require('lspconfig')["sumneko_lua"].setup {
         Lua = {
             runtime = {
                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
+                version = 'LuaJIT'
             },
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
-                globals = { 'vim' },
+                globals = { 'vim' }
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files
-                library = vim.api.nvim_get_runtime_file("", true),
+                library = vim.api.nvim_get_runtime_file("", true)
             },
             -- Do not send telemetry data containing a randomized but unique identifier
-            telemetry = {
-                enable = false,
-            },
-        },
-    },
+            telemetry = { enable = false }
+        }
+    }
 }
 
 require("lspconfig")["prismals"].setup {
@@ -135,20 +130,17 @@ require("lspconfig")["tsserver"].setup {
 -- luasnip setup
 local luasnip = require("luasnip")
 local lspkind = require("lspkind")
+
 local cmp = require("cmp")
 cmp.setup {
-    snippet = {
-        expand = function(args)
-            luasnip.lsp_expand(args.body)
-        end
-    },
+    snippet = { expand = function(args) luasnip.lsp_expand(args.body) end },
     mapping = cmp.mapping.preset.insert({
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
+            select = true
         },
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -167,18 +159,21 @@ cmp.setup {
             else
                 fallback()
             end
-        end, { 'i', 's' }),
+        end, { 'i', 's' })
     }),
-    sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-    },
+    sources = { { name = 'nvim_lsp' }, { name = 'luasnip' }, { name = 'copilot' } },
     formatting = {
-        format = lspkind.cmp_format({ with_text = false, maxWidth = 80 })
+        format = lspkind.cmp_format({
+            mode = "symbol",
+            with_text = false,
+            maxWidth = 120,
+            menu = ({ Copilot = "ﯙ" })
+        })
     }
 }
+
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-cmp.event:on(
-    'confirm_done',
-    cmp_autopairs.on_confirm_done()
-)
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+
+-- Enable Simple Snippets
+require("luasnip.loaders.from_vscode").lazy_load()

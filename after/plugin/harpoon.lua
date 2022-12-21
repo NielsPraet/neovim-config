@@ -18,6 +18,13 @@ require("harpoon").setup {
         excluded_filetypes = { "harpoon" },
 
         -- set marks specific to each git branch inside git repository
-        mark_branch = false,
+        mark_branch = false
     }
 }
+
+local ui = require("harpoon.ui")
+
+vim.keymap.set("n", "<C-1>", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<C-2>", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<C-3>", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<C-4>", function() ui.nav_file(4) end)

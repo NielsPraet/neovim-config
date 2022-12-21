@@ -1,55 +1,49 @@
 local wk = require('which-key')
 
-wk.register(
-    {
-        t = {
-            name = "nvim-tree",
-            f = { "<cmd>NvimTreeFocus<CR>", "Focus Tree" },
-            t = { "<cmd>NvimTreeToggle<CR>", "Toggle Tree" }
-        },
-        f = {
-            name = "files",
-            f = { require("telescope.builtin").find_files, "List files in cwd" },
-            g = { require("telescope.builtin").git_files, "Fuzzy search `git lis-files`" },
-            b = { require("telescope.builtin").grep_string, "Search for string under cursor in cwd" },
-            h = { require("telescope.builtin").live_grep, "Grep string with live results" }
-        },
-        x = {
-            name = "trouble diagnostics",
-            x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
-            w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
-            d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
-            l = { "<cmd>TroubleToggle loclist<cr>", "Location List" },
-            q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
-            R = { "<cmd>TroubleToggle lsp_references<cr>", "Toggle LSP References" }
-        },
-        h = {
-            name = "harpoon",
-            p = { require("harpoon.mark").add_file, "mark file" },
-            n = { require("harpoon.ui").toggle_quick_menu, "toggle quick menu" },
-            j = { require("harpoon.ui").nav_prev, "previous mark" },
-            k = { require("harpoon.ui").nav_next, "next mark" },
-        }
+wk.register({
+  f = {
+    name = "files",
+    f = { require("telescope.builtin").find_files, "List files in cwd" },
+    g = {
+      require("telescope.builtin").git_files,
+      "Fuzzy search `git lis-files`"
     },
-    {
-        prefix = "<leader>"
-    }
-)
-
-wk.register(
-    {
-         
-    }
-)
-
-wk.register(
-    {
-
+    b = {
+      require("telescope.builtin").grep_string,
+      "Search for string under cursor in cwd"
     },
-    {
-        mode = "v"
+    h = {
+      require("telescope.builtin").live_grep,
+      "Grep string with live results"
     }
-)
+  },
+  x = {
+    name = "trouble diagnostics",
+    x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
+    w = {
+      "<cmd>TroubleToggle workspace_diagnostics<cr>",
+      "Workspace Diagnostics"
+    },
+    d = {
+      "<cmd>TroubleToggle document_diagnostics<cr>",
+      "Document Diagnostics"
+    },
+    l = { "<cmd>TroubleToggle loclist<cr>", "Location List" },
+    q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+    R = { "<cmd>TroubleToggle lsp_references<cr>", "Toggle LSP References" }
+  },
+  h = {
+    name = "harpoon",
+    p = { require("harpoon.mark").add_file, "mark file" },
+    n = { require("harpoon.ui").toggle_quick_menu, "toggle quick menu" },
+    j = { require("harpoon.ui").nav_prev, "previous mark" },
+    k = { require("harpoon.ui").nav_next, "next mark" }
+  }
+}, { prefix = "<leader>" })
+
+wk.register({})
+
+wk.register({}, { mode = "v" })
 
 wk.setup {
   plugins = {
@@ -57,7 +51,7 @@ wk.setup {
     registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
     spelling = {
       enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 20, -- how many suggestions should be shown in the list?
+      suggestions = 20 -- how many suggestions should be shown in the list?
     },
     -- the presets plugin, adds help for a bunch of default keybindings in Neovim
     -- No actual key bindings are created
@@ -68,8 +62,8 @@ wk.setup {
       windows = true, -- default bindings on <c-w>
       nav = true, -- misc bindings to work with windows
       z = true, -- bindings for folds, spelling and others prefixed with z
-      g = true, -- bindings for prefixed with g
-    },
+      g = true -- bindings for prefixed with g
+    }
   },
   -- add operators that will trigger motion and text object completion
   -- to enable all native operators, set the preset / operators plugin above
@@ -84,11 +78,11 @@ wk.setup {
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
     separator = "➜", -- symbol used between a key and it's label
-    group = "+", -- symbol prepended to a group
+    group = "+" -- symbol prepended to a group
   },
   popup_mappings = {
     scroll_down = '<c-d>', -- binding to scroll down inside the popup
-    scroll_up = '<c-u>', -- binding to scroll up inside the popup
+    scroll_up = '<c-u>' -- binding to scroll up inside the popup
   },
   window = {
     border = "none", -- none, single, double, shadow
@@ -101,10 +95,10 @@ wk.setup {
     height = { min = 4, max = 25 }, -- min and max height of the columns
     width = { min = 20, max = 50 }, -- min and max width of the columns
     spacing = 3, -- spacing between columns
-    align = "left", -- align columns left, center or right
+    align = "left" -- align columns left, center or right
   },
   ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
-  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "}, -- hide mapping boilerplate
+  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
   show_help = true, -- show help message on the command line when the popup is visible
   show_keys = true, -- show the currently pressed key and its label as a message in the command line
   triggers = "auto", -- automatically setup triggers
@@ -114,13 +108,9 @@ wk.setup {
     -- this is mostly relevant for key maps that start with a native binding
     -- most people should not need to change this
     i = { "j", "k" },
-    v = { "j", "k" },
+    v = { "j", "k" }
   },
   -- disable the WhichKey popup for certain buf types and file types.
   -- Disabled by deafult for Telescope
-  disable = {
-    buftypes = {},
-    filetypes = { "TelescopePrompt" },
-  },
+  disable = { buftypes = {}, filetypes = { "TelescopePrompt" } }
 }
-
